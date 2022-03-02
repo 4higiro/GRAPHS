@@ -1,4 +1,6 @@
 .vs
+Debug
+Release
 GRAPHS.sln
 GRAPHS.vcxproj
 GRAPHS.vcxproj.filters
