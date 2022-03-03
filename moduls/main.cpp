@@ -133,22 +133,6 @@ public:
 			// Подсвет суммы нагрузок ребер остова
 			result += matrix[minX][minY];
 		}
-
-		// Запись матрицы остова
-		for (int i = 0; i < n; i++) {
-			for (int j = i; j < n; j++) {
-				bool f = true;
-				for (int k = 0; k < n - 1; k++) {
-					if (i == edges[0][k] && j == edges[1][k])
-						f = false;
-				}
-				if (f) {
-					matrix[i][j] = 99999;
-					matrix[j][i] = 99999;
-				}
-			}
-			matrix[i][i] = 0;
-		}
 	}
 };
 
@@ -160,6 +144,7 @@ void main()
 	setlocale(LC_ALL, "Ru");
 
 	ifstream file;
+
 	file.open("data.txt");
 
 	if (!file.is_open())
