@@ -14,6 +14,7 @@ public:
 	void clear();
 	void dijkstra(int& result, int* path, int start, int finish);
 	void primCraskal(int** frame);
+	void floyd(int& result, int start, int finish);
 };
 
 #endif // !GRAPH

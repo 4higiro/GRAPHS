@@ -95,5 +95,11 @@ void main()
 
 	cout << endl;
 
+	g.floyd(result, 2, 4);
+
+	cout << endl << "Floyd (" << result << ")" << "\t";
+
+	cout << endl;
+
 	system("pause");
 }

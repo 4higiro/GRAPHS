@@ -169,3 +169,20 @@ void graph::primCraskal(int** frame)
 	}
 
 }
+
+// Floyd's algorithm
+void graph::floyd(int& result, int start, int finish)
+{
+	for (int k = 0; k < n; k++)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				matrix[i][j] = min(matrix[i][j], matrix[i][k] + matrix[k][j]);
+			}
+		}
+	}
+
+	result = matrix[start][finish];
+}
